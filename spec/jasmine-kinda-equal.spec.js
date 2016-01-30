@@ -7,14 +7,6 @@ describe('kinda-equal', function() {
     it('knows false is kinda equal to true', function() {
       expect(false).toBeKindaEqualTo(true);
     });
-
-    it('knows false is kinda equal to false', function() {
-      expect(false).toBeKindaEqualTo(false);
-    });
-
-    it('knows true is kinda equal to true', function() {
-      expect(true).toBeKindaEqualTo(true);
-    });
   });
 
   describe('numbers', function() {
