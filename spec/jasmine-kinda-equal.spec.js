@@ -107,5 +107,20 @@ describe('kinda-equal', function() {
       expect('').not.toBeKindaEqualTo(42);
       expect('').not.toBeKindaEqualTo(function() {});
     });
+
+    it('knows that even while playing around with objects it\'s a good idea to be safe', function() {
+      expect({}).not.toBeKindaEqualTo(42);
+      expect({}).not.toBeKindaEqualTo('');
+      expect({}).not.toBeKindaEqualTo(function() {});
+      expect([]).not.toBeKindaEqualTo(42);
+      expect([]).not.toBeKindaEqualTo('');
+      expect([]).not.toBeKindaEqualTo(function() {});
+    });
+
+    it('knows that even while playing around with functions it\'s a good idea to be safe', function() {
+      expect(function() {}).not.toBeKindaEqualTo(42);
+      expect(function() {}).not.toBeKindaEqualTo('');
+      expect(function() {}).not.toBeKindaEqualTo({});
+    });
   });
 });
