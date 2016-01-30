@@ -18,11 +18,26 @@ and all of their values are respectivly kinda equal. For example [1,2,3] is kind
 
 ## Usage Examples
 ``` js
+// compare some bools
 expect(true).toBeKindaEqualTo(false);
+
+// compare some numbers
 expect(0).toBeKindaEqualTo(1);
+expect(0.5).toBeKindaEqualTo(1);
+expect(1).not.toBeKindaEqualTo(3);
+
+// compare some strings
 expect('dog').toBeKindaEqualTo('god');
+expect('pepsi').not.toBeKindaEqualTo('coke');
+
+// compare some objects
 expect([1,'dog',3]).toBeKindaEqualTo([0,'god',4]);
+expect({a: 1, b: 2, c: 'bob', d: 4}).toBeKindaEqualTo({a: 2, b: 3, c: 'obo', d: 5});
+expect({a: 1, b: 0, c: 'john', d: 4}).not.toBeKindaEqualTo({a: 2, b: 3, c: 'fred', d: 5});
+
+// compare some functions
 expect(() => 42).toBeKindaEqualTo(() => 43)
+expect(() => .007).not.toBeKindaEqualTo(() => 43)
 ```
 
 ## A Note on Typesaftey
