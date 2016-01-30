@@ -72,7 +72,7 @@
         return {
           pass: false,
           message: 'Don\'t try to compare things of different types. It\'s really' +
-            ' not a good idea. We reccomend you use [TypeScript](http://www.typescriptlang.org/)' +
+            ' not a good idea. I recommend you use [TypeScript](http://www.typescriptlang.org/)' +
             ' to ween yourself off of the bad habits JavaScript tought you.'
         };
       }
