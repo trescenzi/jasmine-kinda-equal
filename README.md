@@ -1,10 +1,10 @@
 # Jasmine Kinda Equal
 
-### The Jasmine matchers for when you need tests that aren't quite as precise as usual
+### The Jasmine matcher for when you need tests that aren't quite as precise as usual
 
-Jasmine Kinda Equal exports a single new matcher for use in tests `toBeKindaEqualTo`. The exact
+Jasmine Kinda Equal exports a single new matcher for use in tests: `toBeKindaEqualTo`. The exact
 meaning of something being kinda equal to something else depends on the type of the values being
-provided.
+compared.
 
 - `boolean`: Given that there are only two values for a boolean to have they are both, quite reasonably,
 kinda equal to each other. For example true is kinda equal to false.
@@ -37,7 +37,7 @@ expect({a: 1, b: 0, c: 'john', d: 4}).not.toBeKindaEqualTo({a: 2, b: 3, c: 'fred
 
 // compare some functions
 expect(() => 42).toBeKindaEqualTo(() => 43)
-expect(() => .007).not.toBeKindaEqualTo(() => 43)
+expect(() => 0.007).not.toBeKindaEqualTo(() => 43)
 ```
 
 ## A Note on Typesaftey
